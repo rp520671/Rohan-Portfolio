@@ -10,9 +10,7 @@ import { GoogleGeminiEffect } from './ui/google-gemini-effect';
 import { Education } from './Components/Education';
 import { Experience } from './Components/Experience';
 
-
-export default function page() {
-
+function useScrollTransform() {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -25,6 +23,19 @@ export default function page() {
   const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
   const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
 
+  return {
+    ref,
+    pathLengthFirst,
+    pathLengthSecond,
+    pathLengthThird,
+    pathLengthFourth,
+    pathLengthFifth,
+  };
+}
+
+
+export default function Page() {
+  const { ref, pathLengthFirst, pathLengthSecond, pathLengthThird, pathLengthFourth, pathLengthFifth } = useScrollTransform();
   return (
     <div className='min-h-screen bg-[#09090B] overflow-hidden'>
 
