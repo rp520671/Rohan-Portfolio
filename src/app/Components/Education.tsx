@@ -16,7 +16,7 @@ export function Education() {
             <InfiniteMovingCards
                 items={grades}
                 direction="right"
-                speed="slow"
+                speed="normal"
             />
         </div>
         </div >
