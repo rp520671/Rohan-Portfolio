@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 const Navbar = ({ className }: { className?: string }) => {
   const socials = [
     {
-      link: 'https://www.linkedin.com/in/rohan520671/',
+      link: 'https://www.linkedin.com/in/rohan-patil-ra960097/',
       label: 'LinkedIn',
       Icon: SiLinkedin,
     },
